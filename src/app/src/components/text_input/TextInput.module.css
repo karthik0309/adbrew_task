@@ -1,0 +1,30 @@
+.input__container{
+    display: flex;
+    width:400px;
+    height:100px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.text__input{
+    width: 380px;
+    height: 40px;
+    outline: none;
+    border: 1.5px solid lightgray;
+    color:grey;
+    font-size: larger;
+    padding: 4px;
+}
+
+.submit{
+    width:390px;
+    height: 40px;
+    cursor: pointer;
+    outline:none;
+    border:none;
+    color:white;
+    font-size: larger;
+    background-color: rgb(0,164,181);
+}

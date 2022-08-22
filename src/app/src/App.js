@@ -1,29 +1,36 @@
-import './App.css';
-import logo from './logo.svg';
+import React,{useEffect} from 'react'
+import TextInput from './components/text_input/TextInput'
+import TodoCard from './components/todo_card/TodoCard';
+import { useGlobalStateValue } from "./context/index";
+import {getAllTodos} from './action/Todo'
+import classes from './App.module.css'
+
+const App = () => {
+
+  const { state,dispatch } = useGlobalStateValue();
+  const { todoList } = state;
 
 
-export function App() {
+  useEffect(()=>{
+    try{
+      getAllTodos(dispatch)
+    }catch(err){
+      console.log(err)
+    }
+  },[])
+  
   return (
-    <div className="App">
-      <div>
-        <h1>List of TODOs</h1>
-        <li>Learn Docker</li>
-        <li>Learn React</li>
-      </div>
-      <div>
-        <h1>Create a ToDo</h1>
-        <form>
-          <div>
-            <label for="todo">ToDo: </label>
-            <input type="text" />
-          </div>
-          <div style={{"marginTop": "5px"}}>
-            <button>Add ToDo!</button>
-          </div>
-        </form>
+    <div className={classes.main__container}>
+      <h1>Todo List!</h1>
+      <TextInput/> 
+      <div className={classes.todo__list}>
+        {todoList.length>0 && 
+        todoList.map((todoItem,index)=>(
+          <TodoCard todoItem={todoItem} key={index}/>
+        ))}  
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

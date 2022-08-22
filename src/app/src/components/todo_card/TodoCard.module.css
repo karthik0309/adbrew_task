@@ -1,0 +1,22 @@
+.card__container{
+    width:380px;
+    height:30px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1.5px solid lightgray;
+    padding:8px;
+    margin-top:10px;
+}
+
+.operations{
+    display: flex;
+    align-items: center;
+}
+
+.todo__delete{
+    background:transparent;
+    outline:none;
+    border:none;
+    cursor: pointer;
+}
