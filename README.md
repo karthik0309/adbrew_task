@@ -1,3 +1,29 @@
+
+## Demo [Here](https://drive.google.com/file/d/1PZwJcKbkAViTgb85tG_r0lv8-kJr4GuI/view?usp=sharing)
+
+## Structure
+
+- rest (Backend)
+  - todo (Django app)
+    - models.py 
+    - serializers.py
+    - api_views.py
+    - urls.py
+
+- app(Frontend)
+    - actions (API calls)
+    - assets  (Images)
+    - components 
+    - constants 
+    - context (context api)
+    
+<!-- ROADMAP -->
+## roadmap
+
+- [x] ~~Clone and Create Docker image~~
+- [x] ~~Implete Rest API with CRUD operations~~
+- [x] ~~Created Fronted~~
+- [x] ~~Integrated with backend~~
 # AdBrew Test!
 
 Hello! This test is designed to specifically test your Python, React and web development skills. The task is unconventional and has a slightly contrived setup on purpose and requires you to learn basic concepts of Docker on the fly. 

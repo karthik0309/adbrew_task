@@ -6,4 +6,4 @@ from django.db.models import fields
 class TodoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Todo
-        fields = '__all__'
+        fields = ('id','name','completed')
