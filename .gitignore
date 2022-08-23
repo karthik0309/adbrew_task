@@ -1,6 +1,6 @@
 .env
 
-/db
-/temp
+db/
+temp/
 
 
