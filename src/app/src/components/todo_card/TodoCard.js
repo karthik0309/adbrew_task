@@ -11,7 +11,7 @@ const TodoCard = ({todoItem}) => {
 
   const handleDelete=()=>{
     try{
-      deleteTodo(todoItem.id,dispatch)
+      deleteTodo(todoItem._id,dispatch)
     }catch(err){
       console.log(err)
     }

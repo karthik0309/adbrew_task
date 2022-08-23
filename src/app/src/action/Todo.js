@@ -65,7 +65,7 @@ export const deleteTodo=async(id,dispatch)=>{
 
 export const putTodo=async(todoItem,completed,dispatch)=>{
     try{
-        fetch(`${API}/${todoItem.id}/`,{
+        fetch(`${API}/${todoItem._id}/`,{
             headers:{
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
@@ -74,11 +74,8 @@ export const putTodo=async(todoItem,completed,dispatch)=>{
             body:JSON.stringify({name:todoItem.name,completed:completed})
         })
         .then((res)=>{
-            return res.json()
-        })
-        .then((res)=>{
             dispatch({type:COMPLETE_TODO,value:{
-                id:todoItem.id,
+                id:todoItem._id,
                 completed:completed
             }})
         })

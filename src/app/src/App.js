@@ -19,6 +19,7 @@ const App = () => {
     }
   },[])
   
+  console.log(state)
   return (
     <div className={classes.main__container}>
       <h1>Todo List!</h1>

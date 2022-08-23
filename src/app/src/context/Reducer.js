@@ -12,14 +12,14 @@ const Reducer = (currState = {}, action) => {
         return {
           ...currState,
           todoList: currState.todoList.filter(
-            (item) => item.id != action.value
+            (item) => item._id != action.value
           ),
         };
         
       case COMPLETE_TODO:
          let temp=[...currState.todoList]
          temp.map((item)=>{
-             if(item.id==action.value.id){
+             if(item._id==action.value.id){
                  item.completed=action?.value?.completed
              }
              return 1
